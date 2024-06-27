@@ -1,0 +1,141 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+html {
+  box-sizing: border-box;/*상속*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+  background: #4C4C4C;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 3em;
+}
+
+    .container {
+      max-width: 800px;
+      min-height: 500px; /* 예시 높이, 적절히 조정 가능 */
+      margin: auto;
+      margin-top: 10vh;
+      background: #fff;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border: 40px solid transparent;
+      -webkit-border-image: url('/static/img/찐설정.png') 30 fill round; /* path to your image */
+      -o-border-image: url('/static/img/찐설정.png') 30 fill round;
+      border-image: url('/static/img/찐설정.png') 50 fill round;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* 변경될 수 있음 */
+      align-items: center; 
+      }
+
+
+    form input[type="text"], form input[type="number"]{
+      width: 200px; /* 절대 단위로 변경 */
+      padding: 7px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #EAEAEA;
+      border-radius: 4px;
+    }
+
+    b {
+      margin: 0;
+      margin-top: 50px;
+      padding: 0;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      vertical-align: baseline;
+    }
+
+    .button.disabled {
+      background-color: #EAEAEA !important;; /* 비활성화 상태일 때의 배경색 */
+      color: #ffffff !important;; /* 비활성화 상태일 때의 글꼴 색상 */
+      cursor: not-allowed; /* 커서를 '금지' 아이콘으로 변경 */
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    legend {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    [type="checkbox"]{
+      appearance: none;
+      position: relative;
+      width:3.75em;
+      height: 1.25em;
+    }
+
+    .switch {
+      position: relative;
+      width: 50px; /* 스위치의 너비 */
+      height: 34px;
+    }
+
+
+    .switch-label {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #EAEAEA; /* 스위치가 꺼져 있을 때의 배경색 */
+      transition: .4s;
+      border-radius: 34px; /* 스위치의 모서리를 둥글게 */
+    }
+
+    .switch-label:before {
+      position: absolute;
+      content: "";
+      height: 23px; /* 스위치 핸들의 높이 */
+      width: 26px; /* 스위치 핸들의 너비 */
+      left: 2px;
+      bottom: 2px;
+      background-color: white; /* 스위치 핸들의 색상 */
+      transition: .4s;
+      border-radius: 50%; /* 핸들을 원형으로 */
+    }
+
+    input:checked + .switch-label {
+      background-color: #FFE400; /* 스위치가 켜져 있을 때의 배경색 */
+    }
+
+    input:checked + .switch-label:before {
+      transform: translateX(26px); /* 스위치 핸들을 오른쪽으로 이동 */
+    }
+
+.image-radio {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.image-radio input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.image-radio img {
+  border: 2px solid transparent; /* No border by default */
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+.image-radio input[type="radio"]:checked + img {
+  border-color: gray; /* Border color when selected */
+}

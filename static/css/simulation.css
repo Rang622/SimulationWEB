@@ -1,0 +1,40 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+html {
+  box-sizing: border-box;/*상속*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+  background: #4C4C4C;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 3em;
+}
+
+    .container {
+      max-width: 1600px;
+      min-height: 800px; /* 예시 높이, 적절히 조정 가능 */
+      margin: auto;
+      margin-top: 7vh;
+      background: #4C4C4C;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border: 40px solid transparent;
+      -webkit-border-image: url('/static/img/tv.png') 30 fill round; /* path to your image */
+      -o-border-image: url('/static/img/tv.png') 30 fill round;
+      border-image: url('/static/img/tv.png') 70 fill round;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* 변경될 수 있음 */
+      align-items: center; 
+      }

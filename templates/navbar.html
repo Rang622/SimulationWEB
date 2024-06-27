@@ -1,0 +1,14 @@
+<nav id="nav">
+    <ul>
+        <li class="special">
+            <a href="#menu" class="menuToggle"></a>
+            <div id="menu">
+                <ul>
+                    <li><a href="{{ url_for('home.home') }}">메인</a></li>
+                    <li><a href="{{ url_for('setting.setting') }}">설정하기</a></li>
+                    <li><a href="{{ url_for('learning.learning') }}">학습하기</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</nav>

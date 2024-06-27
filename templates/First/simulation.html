@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>홈페이지</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/simulation.css" />
+		<link rel="stylesheet" href="/static/css/navbar.css" />
+		<link rel="stylesheet" href="/static/css/button.css" />
+		<noscript><link rel="stylesheet" href="/static/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+					<header id="header" class="alt">
+					<h1><a href="{{ url_for('home.home') }}">전과자들</a></h1>
+					{% include 'navbar.html' %}
+				</header>
+				<div class="container">
+                </div>
+		</div>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/jquery.scrollex.min.js"></script>
+		<script src="/static/js/jquery.scrolly.min.js"></script>
+		<script src="/static/js/browser.min.js"></script>
+		<script src="/static/js/breakpoints.min.js"></script>
+		<script src="/static/js/util.js"></script>
+		<script src="/static/js/main.js"></script>
+	</body>
+</html>

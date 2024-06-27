@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setting</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/css/setting.css" />
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+    <link rel="stylesheet" href="/static/css/button.css" />
+    <noscript><link rel="stylesheet" href="/static/css/noscript.css" /></noscript>
+</head>
+<body class="landing is-preload">
+    <div id="page-wrapper">
+        <header id="header" class="alt">
+            <h1><a href="{{ url_for('home.home') }}">전과자들</a></h1>
+            {% include 'navbar.html' %}
+        </header>
+    </div>
+    <div class="container">
+        <form action="/setting/save" method="post">
+        <fieldset>
+            <span>시간</span>
+            <span class="switch">
+                <input type="checkbox" id="Time">
+                <label for="Time" class="switch-label"></label><br>
+            </span>
+            <label for="Humidity">습도</label>
+            <span class="slider">
+                <input type="range" min="0" max="100" value="1" class="slider" id="Humidity" name="Humidity">
+                <span id="HumidityValue">1%</span>
+            </span><br>
+            <label for="Weather">날씨</label>
+            <form>
+                <label class="image-radio">
+                  <input type="radio" name="weather" value="rainy" />
+                  <img src="/static/img/비.jpg" alt="Rainy" />
+                </label>
+                
+                <label class="image-radio">
+                  <input type="radio" name="weather" value="windy" />
+                  <img src="/static/img/바람.jpg" alt="Windy" />
+                </label>
+                
+                <label class="image-radio">
+                  <input type="radio" name="weather" value="sunny" />
+                  <img src="/static/img/해.jpg" alt="Sunny" />
+                </label>
+              </form><br>
+            <span>비</span>
+            <span class="switch">
+                <input type="checkbox" id="PreviousWeather">
+                <label for="PreviousWeather" class="switch-label"></label><br>
+            </span>
+            <label for="Weight">물체무게</label>
+            <span class="slider">
+                <input type="range" min="30" max="50" value="1" class="slider" id="Weight" name="Weight">
+                <span id="HumidityValue">30kg</span>
+            </span><br>
+            <b class="actions special">
+                <a href="{{ url_for('simulation.simulation') }}" class="button primary">시작</a>
+            </b>
+        </fieldset>
+        </form>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.scrollex.min.js"></script>
+    <script src="/static/js/jquery.scrolly.min.js"></script>
+    <script src="/static/js/browser.min.js"></script>
+    <script src="/static/js/breakpoints.min.js"></script>
+    <script src="/static/js/util.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/setting.js"></script>
+    <script src="/static/js/formValidation.js"></script>
+</body>
+</html>
